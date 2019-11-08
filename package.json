@@ -1,0 +1,17 @@
+{
+  "name": "@digitalazgroup/eslint-config",
+  "description": "ESLint config for javascript",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint-plugin-eslint-comments": "^3.1.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=6.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
+}
