@@ -9,9 +9,9 @@ Install package as dev dependency:
 yarn add -D digitalazgroup/eslint-config
 ```
 
-Add config to `.eslintrc.*`. Here's an example `.eslintrc.json` file:
+Add config to `.eslintrc.*`. Here's an example `.eslintrc.js` file:
 
-```json
+```js
 module.exports = {
   extends: [
     '@digitalazgroup'
