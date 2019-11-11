@@ -6,12 +6,19 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
   },
+  settings: {
+    'import/resolver': {
+      'babel-module': {}
+    }
+  },
   extends: [
     'eslint:recommended',
     'plugin:eslint-comments/recommended',
+    'plugin:import/recommended'
   ],
   plugins: [
     'eslint-comments',
+    'import'
   ],
   overrides: [
     {
@@ -162,5 +169,14 @@ module.exports = {
     // ESLint Comments Plugin
     // The following rules are made available via eslint-plugin-eslint-comments
     'eslint-comments/no-unused-disable': 2, // disallow unused eslint-disable comments
+
+    // ESLint Import Plugin
+    // The following rules are made available via eslint-plugin-import
+    'import/first': 2, // Ensure all imports appear before other statements
+    'import/exports-last': 2, // Ensure all exports appear after other statements
+    'import/no-duplicates': 2, // Report repeated import of the same module in multiple places
+    "import/order": [2, {'groups': ['builtin', ['external', 'internal'], ['unknown'], ['parent', 'sibling', 'index']], 'newlines-between': 'always'}], // Enforce a convention in module import order
+    'import/newline-after-import': 2, // Enforce a newline after import statements
+    'import/prefer-default-export': 2, // Prefer a default export if module exports a single name
   },
 }
